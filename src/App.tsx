@@ -1,7 +1,9 @@
+import { Transactions } from "./pages/Transactions";
+
 export const App = () => {
   return (
     <div className="App">
-      <div></div>
+      <Transactions />
     </div>
   );
 };
