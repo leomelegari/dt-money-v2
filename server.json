@@ -1,0 +1,28 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "description": "Desenvolvimento de website",
+            "type": "income",
+            "category": "Venda",
+            "price": 1400,
+            "createdAt": "2022-10-01T13:04:49.135Z"
+        },
+        {
+            "id": 2,
+            "description": "Desenvolvimento de servidor",
+            "type": "income",
+            "category": "Venda",
+            "price": 6500,
+            "createdAt": "2022-11-01T13:04:49.135Z"
+        },
+        {
+            "id": 3,
+            "description": "Energia",
+            "type": "outcome",
+            "category": "Conta",
+            "price": 256,
+            "createdAt": "2022-11-09T13:04:49.135Z"
+        }
+    ]
+}
