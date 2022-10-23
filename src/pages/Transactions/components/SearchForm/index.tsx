@@ -34,7 +34,7 @@ Por que não utilizar o MEMO a todo momento então??
 */
 
 const searchFormSchema = z.object({
-  query: z.string(),
+  query: z.any(),
 });
 
 type SearchFormInputs = z.infer<typeof searchFormSchema>;
@@ -59,7 +59,7 @@ const SearchFormComponent = () => {
     <SearchFormContainer onSubmit={handleSubmit(handleSeactTransaction)}>
       <input
         type="text"
-        placeholder="Busque por transações"
+        placeholder="Busque por transações (nome, valor ou tipo)"
         {...register("query")}
       />
       <button type="submit" disabled={isSubmitting}>

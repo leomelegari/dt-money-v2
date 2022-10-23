@@ -15,6 +15,7 @@ interface TransactionsContextType {
   transactions: Transaction[];
   loadData: (query?: string) => Promise<void>;
   createTransaction: (data: CreateTransactionInput) => Promise<void>;
+  editTransaction: (data: CreateTransactionInput) => Promise<void>;
 }
 
 interface TransactionsProviderProps {
@@ -63,6 +64,18 @@ export const TransactionsProvider = ({
     },
     [],
   );
+  const editTransaction = useCallback(async (data: CreateTransactionInput) => {
+    const { category, description, price, type } = data;
+    const response = await api.post("transactions", {
+      description,
+      category,
+      price,
+      type,
+      createdAt: new Date(),
+    });
+
+    setTransactions((state) => [response.data, ...state]);
+  }, []);
 
   useEffect(() => {
     loadData();
@@ -70,7 +83,7 @@ export const TransactionsProvider = ({
 
   return (
     <TransactionsContext.Provider
-      value={{ transactions, loadData, createTransaction }}
+      value={{ transactions, loadData, createTransaction, editTransaction }}
     >
       {children}
     </TransactionsContext.Provider>
