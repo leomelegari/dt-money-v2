@@ -1,28 +1,44 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "description": "Desenvolvimento de website",
-            "type": "income",
-            "category": "Venda",
-            "price": 1400,
-            "createdAt": "2022-10-01T13:04:49.135Z"
-        },
-        {
-            "id": 2,
-            "description": "Desenvolvimento de servidor",
-            "type": "income",
-            "category": "Venda",
-            "price": 6500,
-            "createdAt": "2022-11-01T13:04:49.135Z"
-        },
-        {
-            "id": 3,
-            "description": "Energia",
-            "type": "outcome",
-            "category": "Conta",
-            "price": 256,
-            "createdAt": "2022-11-09T13:04:49.135Z"
-        }
-    ]
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de website",
+      "type": "income",
+      "category": "Venda",
+      "price": 1400,
+      "createdAt": "2022-10-01T13:04:49.135Z"
+    },
+    {
+      "id": 2,
+      "description": "Desenvolvimento de servidor",
+      "type": "income",
+      "category": "Venda",
+      "price": 6500,
+      "createdAt": "2022-11-01T13:04:49.135Z"
+    },
+    {
+      "id": 3,
+      "description": "Energia",
+      "type": "outcome",
+      "category": "Conta",
+      "price": 256,
+      "createdAt": "2022-11-09T13:04:49.135Z"
+    },
+    {
+      "description": "Recebimento mensal",
+      "category": "Lucros",
+      "price": 5000,
+      "type": "income",
+      "createdAt": "2022-10-22T13:57:07.421Z",
+      "id": 4
+    },
+    {
+      "description": "Coxinha de frango",
+      "category": "Comida",
+      "price": 6,
+      "type": "outcome",
+      "createdAt": "2022-10-22T14:10:25.532Z",
+      "id": 5
+    }
+  ]
 }

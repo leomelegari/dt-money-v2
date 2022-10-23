@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContextSelector } from "use-context-selector";
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
@@ -11,7 +11,9 @@ import {
 } from "./styles";
 
 export const Transactions = () => {
-  const { transactions } = useContext(TransactionsContext);
+  const transactions = useContextSelector(TransactionsContext, (context) => {
+    return context.transactions;
+  });
 
   return (
     <div>
@@ -24,7 +26,7 @@ export const Transactions = () => {
           <tbody>
             {transactions.map((item) => {
               return (
-                <tr key={item.id}>
+                <tr key={item.id} onClick={() => console.log(item)}>
                   <td width="50%">{item.description}</td>
                   <td>
                     <PriceHighlight variant={item.type}>

@@ -13,6 +13,15 @@ export const TransactionTable = styled.table`
   border-spacing: 0 0.5rem;
   margin-top: 1.5rem;
 
+  tr {
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.2);
+      transition: 0.15s;
+    }
+  }
+
   td {
     padding: 1.25rem 2rem;
     background-color: ${(props) => props.theme["gray-700"]};
